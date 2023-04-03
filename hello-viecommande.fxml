@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="666.0" prefWidth="519.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.hellocontrollercommande">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+<children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Tableau Commande " wrappingWidth="348.18359375" />
+  <Label text="date debut :" />
+  <TextField fx:id="dateD" />
+  <Label text="date fin:" />
+  <TextField fx:id="dateF" />
+  <Label text="Klm:" />
+  <TextField fx:id="klm" />
+  <Label text="Nom Client:" />
+  <TextField fx:id="NomClient" />
+
+  <Button fx:id="ye" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="40.0" prefWidth="99.0" text="Save" />
+  <Button fx:id="oui" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="51.0" prefWidth="96.0" text="Update" />
+  <Button fx:id="yes" minHeight="21.0" mnemonicParsing="false" onAction="#ondeleteButtonClick" prefHeight="47.0" prefWidth="94.0" text="Delete" />
+
+  <TableView fx:id="tabl" prefHeight="140.0" onMouseClicked="#onRowClick" prefWidth="479.0">
+    <columns>
+      <TableColumn fx:id="colon_id" prefWidth="75.0" text="id" />
+      <TableColumn fx:id="colon_dd" prefWidth="75.0" text="Date debut" />
+      <TableColumn fx:id="colon_df" prefWidth="75.0" text="Date fin" />
+      <TableColumn fx:id="colon_klm" prefWidth="75.0" text="Klm" />
+      <TableColumn fx:id="colon_nomclient" prefWidth="75.0" text="nom client" />
+    </columns>
+  </TableView>
+</children>
+        </VBox>
